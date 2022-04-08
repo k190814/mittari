@@ -7,7 +7,7 @@ var bodyParser = require("body-parser")
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 
-var HTTP_PORT = 8000
+var HTTP_PORT = process.env.PORT || 8080
 // Käynnistetään serveri
 app.listen(HTTP_PORT, () =>{
     console.log("=================================\nServer running on port %PORT%\n=================================".replace("%PORT%", HTTP_PORT))
